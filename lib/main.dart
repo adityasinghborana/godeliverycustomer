@@ -31,31 +31,31 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   firebase_auth.FirebaseAuth firebaseAuth = firebase_auth.FirebaseAuth.instance;
-  // Widget currentPage = restaurents(Title);
+  Widget currentPage = StoryBoard();
   AuthClass authClass = AuthClass();
 
   @override
   void initState() {
     // TODO: implement initState
-    // checklogin();
+    checklogin();
     super.initState();
   }
 
-  // void checklogin() async {
-  //   String? token = await authClass.getToken();
-  //   String? uida = await authClass.getuid();
-  //   if (token != null || uida != null) {
-  //     setState(() {
-  //       print(token);
+  void checklogin() async {
+    String? token = await authClass.getToken();
+    String? uida = await authClass.getuid();
+    if (token != null || uida != null) {
+      setState(() {
+        print(token);
 
-  //       print("$uida hello");
-  //       currentPage = HomePage(); // chage it to home page
-  //     });
-  //   } else {
-  //     print(token);
-  //     currentPage = StoryBoard(); //
-  //   }
-  // }
+        print("$uida hello");
+        currentPage = HomePage(); // chage it to home page
+      });
+    } else {
+      print(token);
+      currentPage = StoryBoard(); //
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
