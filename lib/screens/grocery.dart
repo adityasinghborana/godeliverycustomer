@@ -6,7 +6,7 @@ import 'package:godelivery/models/data/restaurentsdata.dart';
 import 'package:godelivery/models/filter.dart';
 import 'package:godelivery/utilities/constants.dart';
 import 'package:godelivery/widgets/Shopliststack.dart';
-import 'package:godelivery/widgets/filtertab.dart';
+import 'package:godelivery/widgets/filtersliderrestaurent.dart';
 
 class grocery extends StatefulWidget {
   String title;
