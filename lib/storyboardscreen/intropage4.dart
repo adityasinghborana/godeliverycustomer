@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/signup.dart';
+import '../screens/Auth/signup.dart';
 
 class Intropage4 extends StatelessWidget {
   const Intropage4({Key? key}) : super(key: key);

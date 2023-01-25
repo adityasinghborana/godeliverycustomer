@@ -1,49 +1,42 @@
 {
   "project_info": {
-    "project_number": "591275814271",
-    "project_id": "godelivery-d9477",
-    "storage_bucket": "godelivery-d9477.appspot.com"
+    "project_number": "1052119868402",
+    "project_id": "godeliveryusers",
+    "storage_bucket": "godeliveryusers.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:591275814271:android:ee6e4bdebdd45f10e63e4a",
+        "mobilesdk_app_id": "1:1052119868402:android:26a7c4ed9b6c941f4b016b",
         "android_client_info": {
-          "package_name": "com.go.godelivery"
+          "package_name": "com.godelivery.godelivery"
         }
       },
       "oauth_client": [
         {
-          "client_id": "591275814271-hpuig53r6fhm9t6d2eirncabvvtv8slf.apps.googleusercontent.com",
+          "client_id": "1052119868402-seeibuoibc9k7q1ilpq9ir3m9n710d4r.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.go.godelivery",
-            "certificate_hash": "cfbaabdde21c282c48c9d832520f82d30fbbc0c6"
+            "package_name": "com.godelivery.godelivery",
+            "certificate_hash": "f578dfb749011fe311d9da95c3a914b3e70413d1"
           }
         },
         {
-          "client_id": "591275814271-noeshs88r35rbckvljivi92oo62pv0mq.apps.googleusercontent.com",
+          "client_id": "1052119868402-b9h4tina1luk7v8fm5negmhs09rtgo0o.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAQd7VOpf6u_8p0NVoqQwjbePhcdxjt6g4"
+          "current_key": "AIzaSyAb6fUQRW2W00Yt19tJ_GTVuo-ttoyE4q4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "591275814271-noeshs88r35rbckvljivi92oo62pv0mq.apps.googleusercontent.com",
+              "client_id": "1052119868402-b9h4tina1luk7v8fm5negmhs09rtgo0o.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "591275814271-lfcvhgeglmtel8husq7ab7vhru2nhtu0.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.go.godelivery"
-              }
             }
           ]
         }

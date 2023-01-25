@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:godelivery/screens/signin.dart';
+import 'package:godelivery/screens/Auth/signup.dart';
+
 import 'package:godelivery/service/Authservice.dart';
 
 class Profilepage extends StatelessWidget {
@@ -17,7 +18,7 @@ class Profilepage extends StatelessWidget {
               await storage.delete(key: "uid");
               Navigator.pushAndRemoveUntil(
                   context,
-                  MaterialPageRoute(builder: (context) => SigninPage()),
+                  MaterialPageRoute(builder: (context) => SignupPage()),
                   (route) => false);
             },
             child: Text("Logout")),

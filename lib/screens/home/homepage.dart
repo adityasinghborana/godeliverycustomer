@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:bottom_navigation_view/bottom_navigation_view.dart';
-import 'package:godelivery/screens/homescreen.dart';
+import 'package:godelivery/screens/home/homescreen.dart';
 import 'package:godelivery/screens/profilepage.dart';
 
 class HomePage extends StatefulWidget {

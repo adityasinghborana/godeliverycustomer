@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:godelivery/screens/homepage.dart';
+import 'package:godelivery/screens/home/homepage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
@@ -41,7 +41,7 @@ class AuthClass {
 
   Future<void> signOut({required BuildContext context}) async {
     try {
-      await _googleSignIn.signOut();
+      //await _googleSignIn.signOut();
       await _auth.signOut();
       await storage.delete(key: "token");
       await storage.delete(key: "uid");
@@ -57,7 +57,6 @@ class AuthClass {
       key: "token",
       value: userCredential.credential?.token.toString(),
     );
-
     await storage.write(
       key: "usercredential",
       value: userCredential.toString(),

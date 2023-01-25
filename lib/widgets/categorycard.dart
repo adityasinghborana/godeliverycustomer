@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:godelivery/models/categories.dart';
+import 'package:godelivery/screens/grocery/grocery.dart';
 import '../models/data/restaurentsdata.dart';
-import '../screens/homescreen.dart';
-import '../screens/homepage.dart';
+import '../screens/home/homescreen.dart';
+import '../screens/home/homepage.dart';
 import '../screens/restaurents.dart';
-import '../screens/signin.dart';
 
 Widget categorycard(
   BuildContext context,
@@ -80,7 +80,7 @@ Widget categorycard(
                             onTap: (() => Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => restaurents(title)),
+                                      builder: (context) => grocery(title)),
                                 )),
                             child: Row(
                               children: [

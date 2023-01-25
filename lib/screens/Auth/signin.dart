@@ -2,14 +2,12 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:godelivery/screens/phoneauth.dart';
-import '../service/Authservice.dart';
+import 'package:godelivery/screens/Auth/phoneauth.dart';
 import 'package:flutter/material.dart';
 import 'package:godelivery/screens/forgotpassword.dart';
-import 'package:godelivery/screens/homepage.dart';
-import 'package:godelivery/screens/signup.dart';
+import 'package:godelivery/screens/home/homepage.dart';
+import 'package:godelivery/screens/Auth/signup.dart';
 import 'package:godelivery/service/Authservice.dart';
-import 'package:godelivery/screens/signin.dart';
 
 class SigninPage extends StatefulWidget {
   SigninPage({Key? key}) : super(key: key);
