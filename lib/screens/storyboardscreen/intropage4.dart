@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../screens/Auth/signup.dart';
+import '../Auth/signup.dart';
 
 class Intropage4 extends StatelessWidget {
   const Intropage4({Key? key}) : super(key: key);
@@ -40,7 +40,8 @@ class Intropage4 extends StatelessWidget {
               height: 70,
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.width * .17,
+              height: MediaQuery.of(context).size.height / 16,
+              width: MediaQuery.of(context).size.width * .8,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   primary: Color(0xffBF1D2D),

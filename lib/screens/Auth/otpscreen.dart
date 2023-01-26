@@ -1,11 +1,7 @@
 import 'dart:async';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:godelivery/screens/home/homepage.dart';
-import 'package:otp_text_field/otp_field.dart';
-import 'package:otp_text_field/otp_text_field.dart';
-import 'package:otp_text_field/style.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
 class otpscreen extends StatefulWidget {

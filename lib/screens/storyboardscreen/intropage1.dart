@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 
 class Intropage1 extends StatelessWidget {
   const Intropage1({Key? key}) : super(key: key);
@@ -7,7 +6,7 @@ class Intropage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400,
+      height: 100,
       child: Padding(
         padding: const EdgeInsets.only(top: 150),
         child: Column(

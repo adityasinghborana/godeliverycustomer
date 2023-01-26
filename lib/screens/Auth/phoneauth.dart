@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:fl_country_code_picker/fl_country_code_picker.dart';
 import 'package:godelivery/screens/Auth/otpscreen.dart';

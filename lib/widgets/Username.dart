@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Widget Username() {
+Widget Username(String username) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.start,
     children: [
@@ -11,7 +11,7 @@ Widget Username() {
       Padding(
         padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
         child: Text(
-          "Hey Alley!!",
+          "${username}",
           style: TextStyle(
               fontFamily: 'arial',
               fontStyle: FontStyle.italic,

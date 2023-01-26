@@ -1,9 +1,7 @@
-import 'dart:ui';
+// ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:godelivery/models/categories.dart';
-import 'package:godelivery/models/data/restaurentsdata.dart';
-import 'package:godelivery/models/filter.dart';
+import 'package:godelivery/models/data/Shopdata.dart';
 import 'package:godelivery/utilities/constants.dart';
 import 'package:godelivery/widgets/Shopliststack.dart';
 import 'package:godelivery/widgets/filtersliderrestaurent.dart';
@@ -47,13 +45,13 @@ class _restaurentsState extends State<restaurents> {
       body: Container(
         child: Column(children: [
           Container(
-              height: 100,
+              height: 120,
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
                 itemCount: itemscat.length,
                 itemBuilder: (BuildContext context, int index) {
                   return itemfilter(
-                      itemscat[index].itemnamee, itemscat[index].iconurl);
+                      itemscat[index]["itemnamee"], itemscat[index]["iconurl"]);
                 },
               )),
           Expanded(
@@ -62,13 +60,13 @@ class _restaurentsState extends State<restaurents> {
                 itemCount: Allshopdata.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Shoplist(
-                      Allshopdata[index].imageurl,
-                      Allshopdata[index].Sale,
-                      Allshopdata[index].Time,
-                      Allshopdata[index].Shopname,
-                      Allshopdata[index].rating,
-                      Allshopdata[index].ratingtypee,
-                      Allshopdata[index].items);
+                      Allshopdata[index]["imageurl"],
+                      Allshopdata[index]["Sale"],
+                      Allshopdata[index]["Time"],
+                      Allshopdata[index]["Shopname"],
+                      Allshopdata[index]["rating"],
+                      Allshopdata[index]["ratingtypee"],
+                      Allshopdata[index]["items"]);
                 },
               )),
         ]),

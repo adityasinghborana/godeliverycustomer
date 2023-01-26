@@ -1,13 +1,5 @@
-import 'package:fl_country_code_picker/fl_country_code_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:godelivery/models/data/restaurentsdata.dart';
-import 'package:godelivery/screens/productpage.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-
-import '../models/resataurent.dart';
+import 'package:godelivery/screens/shopdetail/productpage.dart';
 import '../utilities/constants.dart';
 
 class Shoplist extends StatefulWidget {
@@ -151,49 +143,55 @@ class _ShoplistState extends State<Shoplist> {
             Container(
               child: Row(
                 children: [
-                  Container(
-                    child: Icon(
-                      Icons.star,
-                      color: colorAccent,
-                      size: 14,
-                    ),
+                  Icon(
+                    Icons.star,
+                    color: colorAccent,
+                    size: 14,
                   ),
-                  Container(
-                    child: Text(
-                      "${widget.rating}",
-                      style: TextStyle(
-                          color: colorAccent,
-                          fontFamily: "arial",
-                          fontSize: FontSize.s14,
-                          fontWeight: FontWeight.w700),
-                    ),
+                  Text(
+                    "${widget.rating}",
+                    style: TextStyle(
+                        color: colorAccent,
+                        fontFamily: "arial",
+                        fontSize: FontSize.s14,
+                        fontWeight: FontWeight.w700),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    widget.ratingtype,
+                    style: TextStyle(
+                        color: colorAccent,
+                        fontFamily: "arial",
+                        fontSize: FontSize.s14,
+                        fontWeight: FontWeight.w700),
                   ),
                   SizedBox(
                     width: 10,
                   ),
                   Container(
+                    width: MediaQuery.of(context).size.width * .6,
                     child: Text(
-                      widget.ratingtype,
-                      style: TextStyle(
-                          color: colorAccent,
-                          fontFamily: "arial",
-                          fontSize: FontSize.s14,
-                          fontWeight: FontWeight.w700),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Container(
-                    child: Text(
-                      widget.items.toString(),
+                      "  • " +
+                          widget.items.first +
+                          "  • " +
+                          widget.items.elementAt(1) +
+                          "  • " +
+                          widget.items.elementAt(2),
+                      //     .toString()
+                      //     .replaceAll('[', '')
+                      //     .replaceAll(']', '')
+                      //     .replaceAll(',', '•') +
+                      // ' '
+
                       style: TextStyle(
                           color: colorblack,
                           fontFamily: "arial",
                           fontSize: FontSize.s14,
                           fontWeight: FontWeight.w300),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

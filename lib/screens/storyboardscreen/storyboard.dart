@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:godelivery/storyboardscreen/intropage1.dart';
-import 'package:godelivery/storyboardscreen/intropage2.dart';
-import 'package:godelivery/storyboardscreen/intropage3.dart';
-import 'package:godelivery/storyboardscreen/intropage4.dart';
+import 'package:godelivery/screens/storyboardscreen/intropage1.dart';
+import 'package:godelivery/screens/storyboardscreen/intropage2.dart';
+import 'package:godelivery/screens/storyboardscreen/intropage3.dart';
+import 'package:godelivery/screens/storyboardscreen/intropage4.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class StoryBoard extends StatefulWidget {

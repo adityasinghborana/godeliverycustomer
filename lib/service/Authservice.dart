@@ -1,5 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:godelivery/screens/Auth/signin.dart';
 import 'package:godelivery/screens/home/homepage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -36,6 +38,7 @@ class AuthClass {
       print("here---->");
       final snackBar = SnackBar(content: Text(e.toString()));
       ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      Get.to(SigninPage()); // check if this function is working
     }
   }
 
@@ -111,5 +114,9 @@ class AuthClass {
   void showSnackBar(BuildContext context, String text) {
     final snackBar = SnackBar(content: Text(text));
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+
+  Future<String?> saveusername() async {
+    return await _auth.currentUser?.displayName.toString();
   }
 }

@@ -1,9 +1,8 @@
-import 'dart:async';
+// ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-
 import 'home/homepage.dart';
 
 class currentposition extends StatefulWidget {

@@ -1,10 +1,9 @@
+// ignore_for_file: prefer_const_constructors, prefer_final_fields, avoid_print, prefer_const_constructors_in_immutables
+
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'package:godelivery/screens/Auth/phoneauth.dart';
 import 'package:flutter/material.dart';
-import 'package:godelivery/screens/forgotpassword.dart';
+import 'package:godelivery/screens/Auth/forgotpassword.dart';
 import 'package:godelivery/screens/home/homepage.dart';
 import 'package:godelivery/screens/Auth/signup.dart';
 import 'package:godelivery/service/Authservice.dart';
@@ -21,7 +20,7 @@ class _SigninPageState extends State<SigninPage> {
   TextEditingController _emailController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
   AuthClass authClass = AuthClass();
-  final storage = new FlutterSecureStorage();
+  final storage = FlutterSecureStorage();
 
   @override
   Widget build(BuildContext context) {
