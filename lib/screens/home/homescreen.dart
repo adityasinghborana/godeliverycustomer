@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:godelivery/models/categories.dart';
-import 'package:godelivery/screens/signin.dart';
-import '../models/data/restaurentsdata.dart';
-import '../widgets/addressandcart.dart';
-import '../widgets/categorycard.dart';
-import '../widgets/Searchbar.dart';
-import '../widgets/Username.dart';
+
+import '../../models/data/restaurentsdata.dart';
+import '../../widgets/addressandcart.dart';
+import '../../widgets/categorycard.dart';
+import '../../widgets/Searchbar.dart';
+import '../../widgets/Username.dart';
 
 class Homescreen extends StatelessWidget {
   @override

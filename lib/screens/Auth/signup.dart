@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:firebase_core/firebase_core.dart';
-import 'package:godelivery/screens/homepage.dart';
-import 'package:godelivery/screens/phoneauth.dart';
+import 'package:godelivery/screens/Auth/signin.dart';
+import 'package:godelivery/screens/home/homepage.dart';
+import 'package:godelivery/screens/Auth/phoneauth.dart';
 import 'package:godelivery/service/Authservice.dart';
-import './signin.dart';
 
 import 'package:flutter/material.dart';
 

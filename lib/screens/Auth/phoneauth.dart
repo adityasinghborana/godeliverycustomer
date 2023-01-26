@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_country_code_picker/fl_country_code_picker.dart';
-import 'package:godelivery/screens/otpscreen.dart';
+import 'package:godelivery/screens/Auth/otpscreen.dart';
 import 'package:godelivery/service/Authservice.dart';
 
 class Phoneauth extends StatefulWidget {

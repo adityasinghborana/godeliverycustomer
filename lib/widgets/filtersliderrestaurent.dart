@@ -22,8 +22,8 @@ class itemfilter extends StatelessWidget {
                 borderRadius: BorderRadius.all(Radius.circular(40)),
                 child: Image.network(
                   iconurl,
-                  height: 40,
-                  width: 40,
+                  height: 65,
+                  width: 65,
                   fit: BoxFit.cover,
                 ),
               ),

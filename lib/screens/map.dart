@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:godelivery/screens/address.dart';
-import 'package:godelivery/screens/homepage.dart';
+import 'package:godelivery/screens/home/homepage.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class Maps extends StatefulWidget {
