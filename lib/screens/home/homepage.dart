@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:bottom_navigation_view/bottom_navigation_view.dart';
 import 'package:godelivery/screens/home/homescreen.dart';
 import 'package:godelivery/screens/profile/profilepage.dart';
-
 import '../favoritesshop/favoritesshop.dart';
 
 class HomePage extends StatefulWidget {
