@@ -1,29 +1,19 @@
-// ignore_for_file: prefer_const_constructors
-
+// need to change it as it is hardcoded right now
 import 'package:flutter/material.dart';
 import 'package:godelivery/models/data/Shopdata.dart';
 import 'package:godelivery/utilities/constants.dart';
 import 'package:godelivery/widgets/Shopliststack.dart';
 import 'package:godelivery/widgets/filtersliderrestaurent.dart';
 
-class restaurents extends StatefulWidget {
-  String title;
-  restaurents(this.title);
+class favoritesshop extends StatelessWidget {
   @override
-  State<restaurents> createState() => _restaurentsState();
-}
-
-class _restaurentsState extends State<restaurents> {
-  @override
-  Widget build(
-    BuildContext context,
-  ) {
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.black),
           title: Text(
-            widget.title,
+            "Favorites",
             style: TextStyle(color: colorblack),
           ),
           backgroundColor: Colors.white,
@@ -44,18 +34,6 @@ class _restaurentsState extends State<restaurents> {
           ]),
       body: Container(
         child: Column(children: [
-          Container(
-              height: 120,
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: itemscat.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return itemfilter(
-                    itemscat[index].itemnamee,
-                    itemscat[index].iconurl,
-                  );
-                },
-              )),
           Expanded(
               flex: 9,
               child: ListView.builder(

@@ -55,7 +55,7 @@ class _ShoplistState extends State<Shoplist> {
                       topRight: Radius.circular(20),
                     ),
                     child: Image.network(
-                      widget.url,
+                      "${widget.url}",
                       height: 170,
                       width: double.infinity,
                       fit: BoxFit.cover,
@@ -80,10 +80,13 @@ class _ShoplistState extends State<Shoplist> {
                     child: InkWell(
                       onTap: () {
                         setState(() {
+                          click = !click;
+                          icon = icon2;
                           icon = Icon(
                             Icons.favorite,
                             color: colorPrimary,
                           );
+                          print(click);
                         });
                       },
                       child: Container(
@@ -92,7 +95,7 @@ class _ShoplistState extends State<Shoplist> {
                               borderRadius: BorderRadius.circular(40)),
                           padding: EdgeInsets.only(
                               top: 5, right: 5, left: 5, bottom: 5),
-                          child: icon),
+                          child: (click == false) ? icon : icon2),
                     ),
                   ),
                   Positioned(

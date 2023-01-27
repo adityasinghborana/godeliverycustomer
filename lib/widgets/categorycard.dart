@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import '../screens/shopdetail/shop.dart';
 
@@ -36,71 +38,69 @@ class categorycard extends StatelessWidget {
               ),
               Expanded(
                 flex: 4,
-                child: Container(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(
-                        vertical: 25.0, horizontal: 10),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 8, horizontal: 2),
-                          child: Text(
-                            title,
-                            style: TextStyle(
-                                fontFamily: 'arial',
-                                fontSize: 20,
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              vertical: 2, horizontal: 2),
-                          child: Text(
-                            Description,
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontFamily: 'Arial',
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 25.0, horizontal: 10),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 8, horizontal: 2),
+                        child: Text(
+                          title,
+                          style: TextStyle(
+                              fontFamily: 'arial',
+                              fontSize: 20,
                               color: Colors.white,
-                              fontWeight: FontWeight.w400,
-                            ),
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 2, horizontal: 2),
+                        child: Text(
+                          Description,
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontFamily: 'Arial',
+                            color: Colors.white,
+                            fontWeight: FontWeight.w400,
                           ),
                         ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.end,
-                          children: [
-                            InkWell(
-                              onTap: (() => Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: ((context) =>
-                                            restaurents(title))),
-                                  )),
-                              child: Row(
-                                children: [
-                                  Text(
-                                    "Explore",
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontFamily: 'Arial',
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.arrow_forward,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          InkWell(
+                            onTap: (() => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) =>
+                                          restaurents(title))),
+                                )),
+                            child: Row(
+                              children: [
+                                Text(
+                                  "Explore",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontFamily: 'Arial',
                                     color: Colors.white,
+                                    fontWeight: FontWeight.bold,
                                   ),
-                                ],
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+                                ),
+                                Icon(
+                                  Icons.arrow_forward,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
+                          )
+                        ],
+                      )
+                    ],
                   ),
                 ),
               )

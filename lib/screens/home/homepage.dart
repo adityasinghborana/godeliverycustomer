@@ -1,7 +1,11 @@
+// ignore_for_file: prefer_const_constructors prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:bottom_navigation_view/bottom_navigation_view.dart';
 import 'package:godelivery/screens/home/homescreen.dart';
 import 'package:godelivery/screens/profile/profilepage.dart';
+
+import '../favoritesshop/favoritesshop.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -34,9 +38,7 @@ class _HomePageState extends State<HomePage>
         backgroundColor: Colors.lime,
         children: <Widget>[
           Homescreen(),
-          Container(
-            color: Colors.red,
-          ),
+          favoritesshop(),
           Container(
             color: Colors.green,
           ),

@@ -21,7 +21,7 @@ class itemfilter extends StatelessWidget {
               ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(40)),
                 child: Image.network(
-                  iconurl,
+                  "$iconurl",
                   height: 65,
                   width: 65,
                   fit: BoxFit.cover,
