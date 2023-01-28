@@ -46,7 +46,8 @@ class favoritesshop extends StatelessWidget {
                       Allshopdata[index].Shopname,
                       Allshopdata[index].rating,
                       Allshopdata[index].ratingtypee,
-                      Allshopdata[index].items);
+                      Allshopdata[index].items,
+                      Allshopdata[index].price);
                 },
               )),
         ]),

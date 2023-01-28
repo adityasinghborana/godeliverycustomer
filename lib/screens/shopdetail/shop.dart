@@ -62,13 +62,15 @@ class _restaurentsState extends State<restaurents> {
                 itemCount: Allshopdata.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Shoplist(
-                      Allshopdata[index].imageurl,
-                      Allshopdata[index].Sale,
-                      Allshopdata[index].Time,
-                      Allshopdata[index].Shopname,
-                      Allshopdata[index].rating,
-                      Allshopdata[index].ratingtypee,
-                      Allshopdata[index].items);
+                    Allshopdata[index].imageurl,
+                    Allshopdata[index].Sale,
+                    Allshopdata[index].Time,
+                    Allshopdata[index].Shopname,
+                    Allshopdata[index].rating,
+                    Allshopdata[index].ratingtypee,
+                    Allshopdata[index].items,
+                    Allshopdata[index].price,
+                  );
                 },
               )),
         ]),

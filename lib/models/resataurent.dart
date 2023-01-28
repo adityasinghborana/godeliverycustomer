@@ -4,7 +4,7 @@ class shopdata {
   final String Shopname;
   final String imageurl;
   final int rating;
-  final int price;
+  final double price;
   final double distance;
   final String Sale;
   final String Time;

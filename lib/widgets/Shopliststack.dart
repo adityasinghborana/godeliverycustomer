@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:godelivery/models/data/Shopdata.dart';
 import 'package:godelivery/screens/shopdetail/productpage.dart';
 import '../utilities/constants.dart';
 
@@ -10,19 +11,24 @@ class Shoplist extends StatefulWidget {
   final int rating;
   final String ratingtype;
   final List items;
+  final double price;
   Shoplist(this.url, this.sale, this.Time, this.name, this.rating,
-      this.ratingtype, this.items);
+      this.ratingtype, this.items, this.price);
 
   @override
   State<Shoplist> createState() => _ShoplistState();
 }
 
 class _ShoplistState extends State<Shoplist> {
+  List<Shoplist> fav = [];
   Icon icon = Icon(
     Icons.favorite_border_outlined,
     color: colorwhite,
   );
-  Icon icon2 = Icon(Icons.favorite);
+  Icon icon2 = Icon(
+    Icons.favorite,
+    color: colorPrimary,
+  );
   bool click = true;
   void tap() {
     click = !click;
@@ -30,8 +36,6 @@ class _ShoplistState extends State<Shoplist> {
 
   @override
   Widget build(BuildContext context) {
-    //Icon heart = Icon(Icons.favorite);
-    // Icon filledheart = Icon(Icons.favorite_border_outlined);
     return Card(
         color: Colors.white,
         shape: RoundedRectangleBorder(
@@ -80,13 +84,7 @@ class _ShoplistState extends State<Shoplist> {
                     child: InkWell(
                       onTap: () {
                         setState(() {
-                          click = !click;
-                          icon = icon2;
-                          icon = Icon(
-                            Icons.favorite,
-                            color: colorPrimary,
-                          );
-                          print(click);
+                          tap();
                         });
                       },
                       child: Container(
@@ -95,7 +93,7 @@ class _ShoplistState extends State<Shoplist> {
                               borderRadius: BorderRadius.circular(40)),
                           padding: EdgeInsets.only(
                               top: 5, right: 5, left: 5, bottom: 5),
-                          child: (click == false) ? icon : icon2),
+                          child: (click == false) ? icon2 : icon),
                     ),
                   ),
                   Positioned(
@@ -189,7 +187,7 @@ class _ShoplistState extends State<Shoplist> {
                       // ' '
 
                       style: TextStyle(
-                          color: colorblack,
+                          color: colorgreydark,
                           fontFamily: "arial",
                           fontSize: FontSize.s14,
                           fontWeight: FontWeight.w300),
@@ -198,7 +196,48 @@ class _ShoplistState extends State<Shoplist> {
                 ],
               ),
             ),
-            Row(),
+            Container(
+              padding: EdgeInsets.only(top: 8),
+              child: Row(
+                children: [
+                  Text(
+                    "₦ ${widget.price}",
+                    style: TextStyle(
+                        color: colorgreydark,
+                        fontFamily: "arial",
+                        fontSize: FontSize.s14,
+                        fontWeight: FontWeight.w300),
+                  ),
+                  SizedBox(
+                    width: 4,
+                  ),
+                  Text("Delivery",
+                      style: TextStyle(
+                          color: colorgreydark,
+                          fontFamily: "arial",
+                          fontSize: FontSize.s14,
+                          fontWeight: FontWeight.w300)),
+                  SizedBox(
+                    width: 4,
+                  ),
+                  Text("|",
+                      style: TextStyle(
+                          color: colorgreydark,
+                          fontFamily: "arial",
+                          fontSize: FontSize.s14,
+                          fontWeight: FontWeight.w300)),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text("2.4 miles away",
+                      style: TextStyle(
+                          color: colorgreydark,
+                          fontFamily: "arial",
+                          fontSize: FontSize.s14,
+                          fontWeight: FontWeight.w300))
+                ],
+              ),
+            ),
             Row(),
           ],
         ));

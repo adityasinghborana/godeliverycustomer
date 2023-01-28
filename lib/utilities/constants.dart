@@ -6,6 +6,7 @@ const colorHighlights = Color(0xFF0EACD7);
 const colorAccent = Color(0xFF75BF27);
 const colorwhite = Color(0xFFffffff);
 const colorblack = Color(0xFF09323E);
+const colorgreydark = Color(0xff979797);
 
 // fonts
 

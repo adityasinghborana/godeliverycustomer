@@ -9,6 +9,7 @@ class groceryshopdata {
   final int review;
   final String ratingtypee;
   final List items;
+  final isfavorite;
   groceryshopdata(
       {required this.Shopname,
       required this.imageurl,
@@ -19,5 +20,6 @@ class groceryshopdata {
       required this.Time,
       required this.review,
       required this.ratingtypee,
-      required this.items});
+      required this.items,
+      this.isfavorite = false});
 }
