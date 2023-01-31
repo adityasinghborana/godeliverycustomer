@@ -82,7 +82,7 @@ class _MapsState extends State<Maps> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
-                          children: [Text("35 A greter brijeshwari indore ")]),
+                          children: [Text("25 A greter brijeshwari indore ")]),
                     ),
                     Row(
                       children: [

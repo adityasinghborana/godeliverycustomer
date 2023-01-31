@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:godelivery/models/data/Shopdata.dart';
+import 'package:get/get.dart';
+
 import 'package:godelivery/screens/shopdetail/productpage.dart';
+import '../controllers/favorites.dart';
 import '../utilities/constants.dart';
 
 class Shoplist extends StatefulWidget {
@@ -20,19 +22,23 @@ class Shoplist extends StatefulWidget {
 }
 
 class _ShoplistState extends State<Shoplist> {
-  List<Shoplist> fav = [];
   Icon icon = Icon(
     Icons.favorite_border_outlined,
     color: colorwhite,
   );
+
   Icon icon2 = Icon(
     Icons.favorite,
     color: colorPrimary,
   );
+
   bool click = true;
+
   void tap() {
     click = !click;
   }
+
+  final fav4 = Get.put(favcontroller());
 
   @override
   Widget build(BuildContext context) {

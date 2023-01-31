@@ -11,15 +11,18 @@ class shopdata {
   final int review;
   final String ratingtypee;
   final List items;
-  shopdata(
-      {required this.Shopname,
-      required this.imageurl,
-      required this.rating,
-      required this.price,
-      required this.distance,
-      required this.Sale,
-      required this.Time,
-      required this.review,
-      required this.ratingtypee,
-      required this.items});
+  bool isfavorite;
+  shopdata({
+    required this.Shopname,
+    required this.imageurl,
+    required this.rating,
+    required this.price,
+    required this.distance,
+    required this.Sale,
+    required this.Time,
+    required this.review,
+    required this.ratingtypee,
+    required this.items,
+    this.isfavorite = false,
+  });
 }

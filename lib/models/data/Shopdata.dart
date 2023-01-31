@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:godelivery/models/resataurent.dart';
 import '../filtermodel.dart';
 
@@ -62,6 +63,7 @@ List<shopdata> Allshopdata = [
       Sale: "10%off",
       Time: "30 mins",
       ratingtypee: "Excellent",
+      isfavorite: true,
       items: ['american', 'italian', 'japanaese']),
   shopdata(
       Shopname: "Nikita shop",
@@ -74,7 +76,7 @@ List<shopdata> Allshopdata = [
       Time: "30 mins",
       ratingtypee: "Excellent",
       items: ['american', 'italian', 'japanaese']),
-];
+].obs;
 
 List<filter> itemscat = [
   filter(
