@@ -14,12 +14,7 @@ List<shopdata> Allshopdata = [
       Sale: "10%off",
       Time: "30 mins",
       ratingtypee: "Excellent",
-      items: [
-        'american',
-        'italian',
-        'japanaese',
-        'italian',
-      ]),
+      items: ['american', 'italian', 'japanaese', 'italian', 'egg']),
   shopdata(
       Shopname: "Ayush shop",
       imageurl: "https://source.unsplash.com/random/900%C3%97700/?food",
@@ -30,7 +25,7 @@ List<shopdata> Allshopdata = [
       Sale: "20%off",
       Time: "30 mins",
       ratingtypee: "Excellent",
-      items: ['american', 'italian', 'japanaese']),
+      items: ['american', 'italian', 'japanaese', 'chicken']),
   shopdata(
       Shopname: "Aditya shop",
       imageurl: "https://source.unsplash.com/random/900%C3%97700/?pizza",
@@ -41,7 +36,7 @@ List<shopdata> Allshopdata = [
       Sale: "50%off",
       Time: "30 mins",
       ratingtypee: "Good",
-      items: ['american', 'italian', 'japanaese']),
+      items: ['american', 'italian', 'japanaese', 'burgeer']),
   shopdata(
       Shopname: "esse shop",
       imageurl: "https://source.unsplash.com/random/900%C3%97700/?cafe",
@@ -52,7 +47,11 @@ List<shopdata> Allshopdata = [
       Sale: "15%off",
       Time: "30 mins",
       ratingtypee: "Average",
-      items: ['american', 'italian', 'japanaese']),
+      items: [
+        'american',
+        'italian',
+        'japanaese',
+      ]),
   shopdata(
       Shopname: " Ayushi shop",
       imageurl: "https://source.unsplash.com/random/900%C3%97700/?food",
@@ -64,7 +63,7 @@ List<shopdata> Allshopdata = [
       Time: "30 mins",
       ratingtypee: "Excellent",
       isfavorite: true,
-      items: ['american', 'italian', 'japanaese']),
+      items: ['american', 'italian', 'japanaese', 'sushi', 'burger']),
   shopdata(
       Shopname: "Nikita shop",
       imageurl: "https://source.unsplash.com/random/900%C3%97700/?food",
@@ -75,7 +74,7 @@ List<shopdata> Allshopdata = [
       Sale: "10%off",
       Time: "30 mins",
       ratingtypee: "Excellent",
-      items: ['american', 'italian', 'japanaese']),
+      items: ['american', 'italian', 'japanaese', 'daal chawal', 'egg']),
 ].obs;
 
 List<filter> itemscat = [

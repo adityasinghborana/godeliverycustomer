@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:godelivery/controllers/shopcontroller.dart';
+import 'package:godelivery/models/data/Shopdata.dart';
 
 class itemfilter extends StatelessWidget {
+  shopcontroller fil = Get.find();
   final String itemname;
   final String iconurl;
 
@@ -18,13 +22,19 @@ class itemfilter extends StatelessWidget {
         children: [
           Column(
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.all(Radius.circular(40)),
-                child: Image.network(
-                  "$iconurl",
-                  height: 65,
-                  width: 65,
-                  fit: BoxFit.cover,
+              GestureDetector(
+                onTap: () {
+                  fil.Filterdata(itemname);
+                  print("${itemname}");
+                },
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(40)),
+                  child: Image.network(
+                    "$iconurl",
+                    height: 65,
+                    width: 65,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               SizedBox(

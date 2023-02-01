@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:godelivery/models/data/Shopdata.dart';
+import 'package:godelivery/models/resataurent.dart';
 
 import 'package:godelivery/screens/shopdetail/productpage.dart';
 import '../controllers/favorites.dart';
+import '../controllers/shopcontroller.dart';
 import '../utilities/constants.dart';
 
 class Shoplist extends StatefulWidget {
@@ -38,7 +41,7 @@ class _ShoplistState extends State<Shoplist> {
     click = !click;
   }
 
-  final fav4 = Get.put(favcontroller());
+  final fav4 = Get.put(shopcontroller());
 
   @override
   Widget build(BuildContext context) {

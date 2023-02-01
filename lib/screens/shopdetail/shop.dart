@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:godelivery/controllers/shopcontroller.dart';
 import 'package:godelivery/models/data/Shopdata.dart';
 import 'package:godelivery/utilities/constants.dart';
 import 'package:godelivery/widgets/Shopliststack.dart';
 import 'package:godelivery/widgets/filtersliderrestaurent.dart';
 
-class restaurents extends StatefulWidget {
+class restaurents extends StatelessWidget {
   String title;
   restaurents(this.title);
-  @override
-  State<restaurents> createState() => _restaurentsState();
-}
-
-class _restaurentsState extends State<restaurents> {
+  final shops = Get.put(shopcontroller());
   @override
   Widget build(
     BuildContext context,
@@ -21,7 +19,7 @@ class _restaurentsState extends State<restaurents> {
       appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.black),
           title: Text(
-            widget.title,
+            "$title",
             style: TextStyle(color: colorblack),
           ),
           backgroundColor: Colors.white,
@@ -56,20 +54,22 @@ class _restaurentsState extends State<restaurents> {
               )),
           Expanded(
               flex: 9,
-              child: ListView.builder(
-                itemCount: Allshopdata.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return Shoplist(
-                    Allshopdata[index].imageurl,
-                    Allshopdata[index].Sale,
-                    Allshopdata[index].Time,
-                    Allshopdata[index].Shopname,
-                    Allshopdata[index].rating,
-                    Allshopdata[index].ratingtypee,
-                    Allshopdata[index].items,
-                    Allshopdata[index].price,
-                  );
-                },
+              child: Obx(
+                () => ListView.builder(
+                  itemCount: shops.Allshopdata2.value.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Shoplist(
+                      shops.Allshopdata2[index].imageurl,
+                      shops.Allshopdata2[index].Sale,
+                      shops.Allshopdata2[index].Time,
+                      shops.Allshopdata2[index].Shopname,
+                      shops.Allshopdata2[index].rating,
+                      shops.Allshopdata2[index].ratingtypee,
+                      shops.Allshopdata2[index].items,
+                      shops.Allshopdata2[index].price,
+                    );
+                  },
+                ),
               )),
         ]),
       ),
