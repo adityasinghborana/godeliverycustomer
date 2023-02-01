@@ -1,10 +1,11 @@
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:godelivery/models/data/Shopdata.dart';
-import 'package:godelivery/models/resataurent.dart';
+
+import 'package:godelivery/data/Shopdata.dart';
+import 'package:godelivery/models/shopcard.dart';
 
 class favcontroller extends GetxController {
   RxList<shopdata> fav = <shopdata>[].obs;
+  final RxBool favtap = true.obs;
 
   @override
   void onInit() {
@@ -13,13 +14,9 @@ class favcontroller extends GetxController {
   }
 
   void fetchproducts() {
-    var fav2 =
+    var allfav =
         Allshopdata.where((element) => element.isfavorite == true).toList();
 
-    fav.value = fav2;
-  }
-
-  addfav(shopdata product) {
-    fav.add(product);
+    fav.value = allfav;
   }
 }

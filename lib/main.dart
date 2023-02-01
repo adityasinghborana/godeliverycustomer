@@ -4,10 +4,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:godelivery/screens/home/homepage.dart';
+import 'package:godelivery/view/screens/home/homepage.dart';
 
-import 'package:godelivery/service/Authservice.dart';
-import 'screens/storyboardscreen/storyboard.dart';
+import 'package:godelivery/data/service/Authservice.dart';
+import 'view/screens/storyboardscreen/storyboard.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 
 void main() async {
