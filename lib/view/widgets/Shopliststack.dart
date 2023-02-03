@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:godelivery/view/screens/home/homepage.dart';
+import 'package:godelivery/controllers/favorites.dart';
+import 'package:godelivery/data/Shopdata.dart';
+
 import 'package:godelivery/view/screens/shopdetail/shopdetails.dart';
 
 import '../../controllers/shopscontroller.dart';
@@ -16,34 +18,43 @@ class Shoplist extends StatefulWidget {
   final List items;
   final double price;
   final String shopid;
-  Shoplist(this.url, this.sale, this.Time, this.name, this.rating,
-      this.ratingtype, this.items, this.price, this.shopid);
+
+  Shoplist(
+    this.url,
+    this.sale,
+    this.Time,
+    this.name,
+    this.rating,
+    this.ratingtype,
+    this.items,
+    this.price,
+    this.shopid,
+  );
 
   @override
   State<Shoplist> createState() => _ShoplistState();
 }
 
 class _ShoplistState extends State<Shoplist> {
-  Icon icon = Icon(
+  var icon = Icon(
     Icons.favorite_border_outlined,
     color: colorwhite,
-  );
+  ).obs;
 
-  Icon icon2 = Icon(
+  var icon2 = Icon(
     Icons.favorite,
     color: colorPrimary,
-  );
-
-  bool click = true;
-
-  void tap() {
-    click = !click;
-  }
+  ).obs;
 
   final filter = Get.put(shopcontroller());
+  final fav = Get.put(favcontroller());
 
   @override
   Widget build(BuildContext context) {
+    var index =
+        Allshopdata.indexWhere((element) => element.shopid == widget.shopid);
+    // Allshopdata[index].isfavorite = Allshopdata[index].isfavorite;
+
     return Card(
         color: Colors.white,
         shape: RoundedRectangleBorder(
@@ -92,9 +103,22 @@ class _ShoplistState extends State<Shoplist> {
                     right: 10,
                     child: InkWell(
                       onTap: () {
-                        setState(() {
-                          tap();
-                        });
+                        if (Allshopdata[index].isfavorite == false) {
+                          fav.addtofav(widget.shopid, Allshopdata[index]);
+                          icon.value = Icon(
+                            Icons.favorite,
+                            color: colorPrimary,
+                          );
+                          print("added");
+                        } else {
+                          fav.removefromfav(widget.shopid, Allshopdata[index]);
+                          icon.value = Icon(
+                            Icons.favorite_border_outlined,
+                            color: colorwhite,
+                          );
+                          print("removed");
+                        }
+                        // fav.add(Allshopdata[found]);
                       },
                       child: Container(
                           decoration: BoxDecoration(
@@ -102,7 +126,11 @@ class _ShoplistState extends State<Shoplist> {
                               borderRadius: BorderRadius.circular(40)),
                           padding: EdgeInsets.only(
                               top: 5, right: 5, left: 5, bottom: 5),
-                          child: (click == false) ? icon2 : icon),
+                          child: Obx(
+                            () => (Allshopdata[index].isfavorite == false)
+                                ? icon.value
+                                : icon2.value,
+                          )),
                     ),
                   ),
                   Positioned(
@@ -153,31 +181,31 @@ class _ShoplistState extends State<Shoplist> {
             Container(
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.star,
                     color: colorAccent,
                     size: 14,
                   ),
                   Text(
                     "${widget.rating}",
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: colorAccent,
                         fontFamily: "arial",
                         fontSize: FontSize.s14,
                         fontWeight: FontWeight.w700),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Text(
                     widget.ratingtype,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: colorAccent,
                         fontFamily: "arial",
                         fontSize: FontSize.s14,
                         fontWeight: FontWeight.w700),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 10,
                   ),
                   Container(
@@ -195,7 +223,7 @@ class _ShoplistState extends State<Shoplist> {
                       //     .replaceAll(',', '•') +
                       // ' '
 
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: colorgreydark,
                           fontFamily: "arial",
                           fontSize: FontSize.s14,
@@ -211,34 +239,34 @@ class _ShoplistState extends State<Shoplist> {
                 children: [
                   Text(
                     "₦ ${widget.price}",
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: colorgreydark,
                         fontFamily: "arial",
                         fontSize: FontSize.s14,
                         fontWeight: FontWeight.w300),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 4,
                   ),
-                  Text("Delivery",
+                  const Text("Delivery",
                       style: TextStyle(
                           color: colorgreydark,
                           fontFamily: "arial",
                           fontSize: FontSize.s14,
                           fontWeight: FontWeight.w300)),
-                  SizedBox(
+                  const SizedBox(
                     width: 4,
                   ),
-                  Text("|",
+                  const Text("|",
                       style: TextStyle(
                           color: colorgreydark,
                           fontFamily: "arial",
                           fontSize: FontSize.s14,
                           fontWeight: FontWeight.w300)),
-                  SizedBox(
+                  const SizedBox(
                     width: 5,
                   ),
-                  Text("2.4 miles away",
+                  const Text("2.4 miles away",
                       style: TextStyle(
                           color: colorgreydark,
                           fontFamily: "arial",

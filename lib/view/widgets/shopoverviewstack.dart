@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:get/get.dart';
-import 'package:get/instance_manager.dart';
+
 import 'package:godelivery/view/utilities/constants.dart';
 
 import '../../models/products.dart';
 
-class Shopdetails extends StatelessWidget {
+class Shopdetailsstack extends StatelessWidget {
   final String shopid;
   final String Shopname;
   final String imageurl;
@@ -22,7 +20,7 @@ class Shopdetails extends StatelessWidget {
   final List items;
   final List<product> Products;
   bool isfavorite;
-  Shopdetails({
+  Shopdetailsstack({
     required this.shopid,
     required this.Shopname,
     required this.imageurl,

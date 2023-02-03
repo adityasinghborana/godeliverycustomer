@@ -4,7 +4,7 @@ import 'package:godelivery/models/products.dart';
 import 'package:godelivery/models/shopcard.dart';
 import '../models/filtermodel.dart';
 
-List<shopdata> Allshopdata = [
+RxList<shopdata> Allshopdata = [
   shopdata(
     shopid: "1",
     Shopname: "esse shop",
@@ -111,7 +111,6 @@ List<shopdata> Allshopdata = [
       Sale: "10%off",
       Time: "30 mins",
       ratingtypee: "Excellent",
-      isfavorite: true,
       items: [
         'american',
         'italian',
