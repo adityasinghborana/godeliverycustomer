@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:godelivery/view/widgets/CustomElevatedButton.dart';
 import '../Auth/signup.dart';
 
 class Intropage4 extends StatelessWidget {
@@ -42,20 +43,18 @@ class Intropage4 extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height / 10,
               width: MediaQuery.of(context).size.width * .9,
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Color(0xffBF1D2D),
-                  padding: EdgeInsets.symmetric(horizontal: 120, vertical: 20),
-                ),
+              child: CustomElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => SignupPage()),
                   );
                 },
+                textStyle: TextStyle(fontSize: 20),
+                paddingVertical: 20,
+                paddingHorizontal: 100,
                 child: Text(
                   "Get Started ",
-                  style: TextStyle(fontSize: 20),
                 ),
               ),
             )

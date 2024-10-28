@@ -21,7 +21,7 @@ class Intropage3 extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 12),
               child: Text(
-                  "Anything Anytime, Anywhere. We are           here to serve you ",
+                  "Anything Anytime, Anywhere. We are here to serve you ",
                   style: TextStyle(
                       fontSize: 30,
                       fontFamily: 'opensans',

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fl_country_code_picker/fl_country_code_picker.dart';
 import 'package:godelivery/view/screens/Auth/otpscreen.dart';
 import 'package:godelivery/data/service/Authservice.dart';
+import 'package:godelivery/view/widgets/CustomElevatedButton.dart';
 
 class Phoneauth extends StatefulWidget {
   @override
@@ -103,28 +104,22 @@ class _PhoneauthState extends State<Phoneauth> {
               ),
             ),
             Container(
-              child: ElevatedButton(
-                onPressed: () async {
-                  String number = _phonenumber.text;
-                  await authClass.verifyPhoneNumber(
-                      "${countryCode!.dialCode} ${_phonenumber.text}",
-                      context,
-                      setData);
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => otpscreen(
-                            "${countryCode!.dialCode} ${_phonenumber.text}"),
-                      ));
-                  print("$countryCode$number");
-                },
-                child: Text("Send OTP"),
-                style: ElevatedButton.styleFrom(
-                  alignment: Alignment.center,
-                  primary: Color(0xffBF1D2D),
-                ),
-              ),
-            ),
+                child: CustomElevatedButton(
+                    onPressed: () async {
+                      String number = _phonenumber.text;
+                      await authClass.verifyPhoneNumber(
+                          "${countryCode!.dialCode} ${_phonenumber.text}",
+                          context,
+                          setData);
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => otpscreen(
+                                "${countryCode!.dialCode} ${_phonenumber.text}"),
+                          ));
+                      print("$countryCode$number");
+                    },
+                    child: Text("Send OTP"),),),
           ],
         ),
       ),

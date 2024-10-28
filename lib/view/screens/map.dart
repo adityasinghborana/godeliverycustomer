@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:godelivery/view/screens/address.dart';
 import 'package:godelivery/view/screens/home/homepage.dart';
+import 'package:godelivery/view/widgets/CustomElevatedButton.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class Maps extends StatefulWidget {
@@ -61,19 +62,15 @@ class _MapsState extends State<Maps> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: ElevatedButton(
+                            child: CustomElevatedButton(
+                              primaryColor: Color.fromARGB(255, 224, 224, 224),
                               onPressed: () {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) => HomePage()));
                               },
-                              child: Text("Change",
-                                  style: TextStyle(color: Color(0xffBF1D2D))),
-                              style: ElevatedButton.styleFrom(
-                                alignment: Alignment.center,
-                                primary: Color.fromARGB(255, 224, 224, 224),
-                              ),
+                              child: Text("Change"),
                             ),
                           ),
                         ],
@@ -91,7 +88,8 @@ class _MapsState extends State<Maps> {
                           child: SizedBox(
                             height: MediaQuery.of(context).size.height * 0.07,
                             width: MediaQuery.of(context).size.width - 16,
-                            child: ElevatedButton(
+                            child: CustomElevatedButton(
+                              primaryColor: Color.fromARGB(255, 224, 224, 224),
                               onPressed: () {
                                 Navigator.push(
                                     context,
@@ -100,10 +98,6 @@ class _MapsState extends State<Maps> {
                                             currentposition()));
                               },
                               child: Text("Confirm Loction"),
-                              style: ElevatedButton.styleFrom(
-                                alignment: Alignment.center,
-                                primary: Color(0xffBF1D2D),
-                              ),
                             ),
                           ),
                         ),

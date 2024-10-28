@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:godelivery/view/screens/Auth/signin.dart';
+import 'package:godelivery/view/widgets/CustomElevatedButton.dart';
 
 class Forgotpassword extends StatelessWidget {
   firebase_auth.FirebaseAuth firebaseAuth = firebase_auth.FirebaseAuth.instance;
@@ -25,16 +26,12 @@ class Forgotpassword extends StatelessWidget {
                   ),
                   keyboardType: TextInputType.emailAddress,
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    resetpassword(context);
-                  },
-                  child: Text("Send Link"),
-                  style: ElevatedButton.styleFrom(
-                    alignment: Alignment.center,
-                    primary: Color(0xffBF1D2D),
-                  ),
-                ),
+
+                CustomElevatedButton(onPressed: () {
+                  resetpassword(context);
+                }, child: Text("Send Link"),
+                  )
+
               ],
             ),
           ),

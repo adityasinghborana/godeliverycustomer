@@ -5,6 +5,7 @@ import 'package:godelivery/view/screens/Auth/phoneauth.dart';
 import 'package:godelivery/data/service/Authservice.dart';
 
 import 'package:flutter/material.dart';
+import 'package:godelivery/view/widgets/CustomElevatedButton.dart';
 
 class SignupPage extends StatefulWidget {
   SignupPage({Key? key}) : super(key: key);
@@ -126,7 +127,7 @@ class _SignupPageState extends State<SignupPage> {
                   onTap: () {
                     FocusManager.instance.primaryFocus?.unfocus();
                   },
-                  child: ElevatedButton(
+                  child: CustomElevatedButton(
                     onPressed: () async {
                       try {
                         await firebaseAuth.createUserWithEmailAndPassword(
@@ -142,10 +143,6 @@ class _SignupPageState extends State<SignupPage> {
                       }
                     },
                     child: Text("Sign Up"),
-                    style: ElevatedButton.styleFrom(
-                      alignment: Alignment.center,
-                      primary: Color(0xffBF1D2D),
-                    ),
                   ),
                 ),
               ),

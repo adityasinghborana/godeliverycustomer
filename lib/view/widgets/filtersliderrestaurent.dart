@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:godelivery/controllers/shopscontroller.dart';
-import 'package:godelivery/data/Shopdata.dart';
+
 
 class itemfilter extends StatelessWidget {
   shopcontroller fil = Get.find();

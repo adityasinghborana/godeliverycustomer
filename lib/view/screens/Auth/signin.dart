@@ -7,6 +7,7 @@ import 'package:godelivery/view/screens/Auth/forgotpassword.dart';
 import 'package:godelivery/view/screens/home/homepage.dart';
 import 'package:godelivery/view/screens/Auth/signup.dart';
 import 'package:godelivery/data/service/Authservice.dart';
+import 'package:godelivery/view/widgets/CustomElevatedButton.dart';
 
 class SigninPage extends StatefulWidget {
   SigninPage({Key? key}) : super(key: key);
@@ -120,34 +121,31 @@ class _SigninPageState extends State<SigninPage> {
               child: SizedBox(
                 height: 50,
                 width: MediaQuery.of(context).size.width - 20,
-                child: ElevatedButton(
-                  onPressed: () async {
-                    try {
-                      firebase_auth.UserCredential usercredential =
-                          await firebaseAuth.signInWithEmailAndPassword(
-                              email: _emailController.text,
-                              password: _passwordController.text);
-                      await storage.write(
-                        key: "uid",
-                        value: usercredential.user?.uid,
-                      );
-                      print(usercredential.user?.uid);
+                child:
 
-                      Navigator.pushAndRemoveUntil(
-                          context,
-                          MaterialPageRoute(builder: (context) => HomePage()),
-                          (route) => false);
-                    } catch (e) {
-                      final snackbar = SnackBar(content: Text(e.toString()));
-                      ScaffoldMessenger.of(context).showSnackBar(snackbar);
-                    }
-                  },
-                  child: Text("Sign In"),
-                  style: ElevatedButton.styleFrom(
-                    alignment: Alignment.center,
-                    primary: Color(0xffBF1D2D),
-                  ),
-                ),
+                CustomElevatedButton(onPressed: () async {
+        try {
+          firebase_auth.UserCredential usercredential =
+              await firebaseAuth.signInWithEmailAndPassword(
+                  email: _emailController.text,
+                  password: _passwordController.text);
+          await storage.write(
+            key: "uid",
+            value: usercredential.user?.uid,
+          );
+          print(usercredential.user?.uid);
+
+          Navigator.pushAndRemoveUntil(
+              context,
+              MaterialPageRoute(builder: (context) => HomePage()),
+              (route) => false);
+        } catch (e) {
+          final snackbar = SnackBar(content: Text(e.toString()));
+          ScaffoldMessenger.of(context).showSnackBar(snackbar);
+        }
+      }, child: Text("Sign In"))
+
+
               ),
             ),
             Padding(

@@ -2,12 +2,14 @@ import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:godelivery/view/screens/home/homepage.dart';
+import 'package:godelivery/view/widgets/CustomElevatedButton.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
 class otpscreen extends StatefulWidget {
   final String phone;
 
   otpscreen(this.phone);
+
   @override
   State<otpscreen> createState() => _otpscreenState();
 }
@@ -144,24 +146,18 @@ class _otpscreenState extends State<otpscreen> {
               height: 50,
               width: MediaQuery.of(context).size.width - 20,
               child: GestureDetector(
-                onTap: () {
-                  FocusManager.instance.primaryFocus?.unfocus();
-                },
-                child: ElevatedButton(
-                  onPressed: () async {
-                    final String signature =
-                        await SmsAutoFill().getAppSignature;
-                    print("Signature: $signature");
-
-                    starttimer();
+                  onTap: () {
+                    FocusManager.instance.primaryFocus?.unfocus();
                   },
-                  child: Text("Verify"),
-                  style: ElevatedButton.styleFrom(
-                    alignment: Alignment.center,
-                    primary: Color(0xffBF1D2D),
-                  ),
-                ),
-              ),
+                  child: CustomElevatedButton(
+                      onPressed: () async {
+                        final String signature =
+                            await SmsAutoFill().getAppSignature;
+                        print("Signature: $signature");
+
+                        starttimer();
+                      },
+                      child: Text("Verify"))),
             ),
           ),
           RichText(

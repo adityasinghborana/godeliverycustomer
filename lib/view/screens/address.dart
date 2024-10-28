@@ -2,6 +2,7 @@
 
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:godelivery/view/widgets/CustomElevatedButton.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'home/homepage.dart';
 
@@ -19,19 +20,16 @@ class _currentpositionState extends State<currentposition> {
   TextEditingController _Directiontoreach = TextEditingController();
   String type = "";
   Color color = Colors.grey;
+
   Widget Addresstype(bool tapped, String text) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        padding: EdgeInsets.all(15),
-        alignment: Alignment.center,
-        primary: color,
-      ),
-      onPressed: (() => setState(() {
-            type = text;
-            color = Colors.blue;
-          })),
-      child: Text("$text"),
-    );
+    return CustomElevatedButton(
+        paddingVertical: 15,
+        paddingHorizontal: 15,
+        onPressed: () => setState(() {
+              type = text;
+              color = Colors.blue;
+            }),
+        child: Text("$text"));
   }
 
   @override
@@ -101,25 +99,12 @@ class _currentpositionState extends State<currentposition> {
                     Container(
                       padding: EdgeInsets.all(20),
                       width: MediaQuery.of(context).size.width - 20,
-                      child: ElevatedButton(
-                        onPressed: () {
-                          // print(_housecontroller.text);
-                          // print(_apartment.text);
-                          // print(_postalcode.text);
-                          // print(_Directiontoreach.text);
-                          // print(type);
-                          Navigator.push(
+                      child: CustomElevatedButton(
+                          onPressed: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HomePage()));
-                        },
-                        child: Text("Confirm"),
-                        style: ElevatedButton.styleFrom(
-                          padding: EdgeInsets.all(15),
-                          alignment: Alignment.center,
-                          primary: Color(0xffBF1D2D),
-                        ),
-                      ),
+                                  builder: (context) => HomePage())),
+                          child: Text("Confirm")),
                     )
                   ],
                 ),
